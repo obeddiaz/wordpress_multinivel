@@ -59,8 +59,23 @@
                         </form>-->
                         <?php //} ?>
                         <div class="navbar-right">
-                            <?php
-                            wp_bootstrap_right_nav();
+                            <?php if (is_user_logged_in()) { ?>
+                                <ul id="menu-right-menu" class="nav navbar-nav">
+                                    <li id="menu-item-8" class="menu-item menu-item-type-post_type menu-item-object-page">
+                                        <a href="<?php echo admin_url(); ?>" title="Logout">
+                                            Mi Oficina
+                                        </a>
+                                    </li>
+                                    <li id="menu-item-8" class="menu-item menu-item-type-post_type menu-item-object-page">
+                                        <a href="<?php echo wp_logout_url(); ?>" title="Logout">
+                                            Cerrar Sesion
+                                        </a>
+                                    </li>
+                                </ul>
+                                <?php
+                            } else {
+                                wp_bootstrap_right_nav();
+                            }
                             ?>
                         </div>
                     </div>
@@ -70,3 +85,4 @@
         </header> <!-- end header -->
 
         <div class="container">
+            <img src="http://regalosalinstante.org/uploads/3/5/2/8/3528263/header_images/1414005849.jpg" class="img-responsive" style="margin: 0 auto;" alt="Responsive image">

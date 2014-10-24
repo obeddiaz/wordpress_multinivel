@@ -528,7 +528,8 @@ function wp_bootstrap_comments($comment, $args, $depth) {
             wp_die('No se puede iniciar Sesión. Usuario o contraseña Incorrectos');
 
         // redirect back to the requested page if login was successful    
-        header('Location: ' . $_SERVER['REQUEST_URI']);
+        //header('Location: ' . $_SERVER['REQUEST_URI']);
+         wp_redirect(admin_url());
         exit;
     });
 
@@ -536,6 +537,14 @@ function wp_bootstrap_comments($comment, $args, $depth) {
 
     function remove_user_posts_column($column_headers) {
         unset($column_headers['posts']);
+        unset($column_headers['role']);
         return $column_headers;
+    }
+
+    add_action('wp_logout', 'go_home');
+
+    function go_home() {
+        wp_redirect(home_url());
+        exit();
     }
     ?>

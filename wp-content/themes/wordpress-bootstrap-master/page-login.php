@@ -22,7 +22,7 @@ wp_head();
                 <div class="form-group">
                     <input type="submit" value="Iniciar sesión" title="Iniciar sesión" class="btn btn-primary btn-lg btn-block"/>
                     <input type="hidden" name="action" value="my_login_action" />
-                    <span class="pull-right"><a href="/index.php/inscripcion"><div>Inscripcion</div></a></span>
+<!--                    <span class="pull-right"><a href="/index.php/inscripcion"><div>Inscripcion</div></a></span>-->
                 </div>
 
             </div>
