@@ -12,6 +12,9 @@
 
 show_admin_bar(false);
 require_once('custom_functions/custom_filters.php');
+require_once('custom_functions/user_functions.php');
+require_once('custom_functions/register_functions.php');
+
 require_once('library/bones.php');            // core functions (don't remove)
 // Shortcodes
 require_once('library/shortcodes.php');
@@ -529,7 +532,7 @@ function wp_bootstrap_comments($comment, $args, $depth) {
 
         // redirect back to the requested page if login was successful    
         //header('Location: ' . $_SERVER['REQUEST_URI']);
-         wp_redirect(admin_url());
+        wp_redirect(admin_url());
         exit;
     });
 
@@ -547,4 +550,6 @@ function wp_bootstrap_comments($comment, $args, $depth) {
         wp_redirect(home_url());
         exit();
     }
+
+    
     ?>

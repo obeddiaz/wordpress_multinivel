@@ -85,4 +85,3 @@
         </header> <!-- end header -->
 
         <div class="container">
-            <img src="http://regalosalinstante.org/uploads/3/5/2/8/3528263/header_images/1414005849.jpg" class="img-responsive" style="margin: 0 auto;" alt="Responsive image">

@@ -1,5 +1,10 @@
-<?php get_header(); ?>
+<?php
+/*
+  Template Name: Register Page
+ */
 
+?>
+<?php get_header('simple'); ?>
 
 <div id="content" class="clearfix row">
 
@@ -33,11 +38,11 @@
 
             <?php endwhile; ?>	
 
-            <?php if (function_exists('page_navi')) { // if expirimental feature is active ?>
+            <?php if (function_exists('page_navi')) { // if expirimental feature is active  ?>
 
-                <?php page_navi(); // use the page navi function ?>
+                <?php page_navi(); // use the page navi function  ?>
 
-            <?php } else { // if it is disabled, display regular wp prev & next links ?>
+            <?php } else { // if it is disabled, display regular wp prev & next links  ?>
                 <nav class="wp-prev-next">
                     <ul class="pager">
                         <li class="previous"><?php next_posts_link(_e('&laquo; Older Entries', "wpbootstrap")) ?></li>
@@ -63,7 +68,7 @@
 
     </div> <!-- end #main -->
 
-    <?php //get_sidebar(); // sidebar 1 ?>
+    <?php //get_sidebar(); // sidebar 1  ?>
 
 </div> <!-- end #content -->
 
